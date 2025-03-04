@@ -199,14 +199,14 @@
                             Authorization: 'Bearer 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',
                             'HTTP-Referer': 'https://www.sitename.com',
                             'X-Title': 'SiteName',
-                            'Content-Type': 'application/json','Access-Control-Allow-Origin': '*',
- 'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
- 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
- 
+                            'Content-Type': 'application/json',
                         },
                         body: JSON.stringify({
                             model: 'google/gemini-2.0-flash-exp:free',
                             messages: [{ role: 'user', content: input }],
+                            "top_p": 1,
+    "temperature": 0.7,
+    "repetition_penalty": 1
                         }),
                     },
                 );
@@ -225,3 +225,4 @@
     </script>
 </body>
 </html>
+ 
